@@ -11,6 +11,7 @@
 
 /* Common */
 html {
+  scroll-behavior: smooth;
   font-size: 62.5%;
 }
 
@@ -73,23 +74,66 @@ h2 {
   text-align: center;
 }
 
-.content-desc {
-  color: var(--content-text-color);
+.small-content-label,
+.medium-content-label,
+.large-content-label {
+  color: var(--content-heading-color);
+}
+
+.small-content-label {
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 2.8rem; /* 175% */
+}
+
+.medium-content-label {
+  font-weight: 600;
   font-size: 1.8rem;
-  font-weight: 300;
+  line-height: normal;
+}
+
+.large-content-label {
+  font-size: 2.6rem;
+  font-weight: 600;
+  line-height: 3.6rem; /* 138.462% */
+}
+
+.small-label-item-desc,
+.medium-label-item-desc,
+.large-label-item-desc {
+  color: var(--content-text-color);
+}
+
+.small-label-item-desc {
+  font-size: 1.4rem;
+  line-height: 2.6rem; /* 185.714% */
+}
+
+.medium-label-item-desc {
+  font-size: 1.6rem;
+  line-height: 2.8rem; /* 175% */
+}
+
+.large-label-item-desc {
+  font-size: 1.8rem;
   line-height: 3rem; /* 166.667% */
 }
-
-.content-label {
-  color: var(--content-heading-color);
-  font-weight: 600;
-}
-
-.label-item-desc {
-  color: var(--content-text-color);
-  font-size: 1.6rem;
-  font-weight: 300;
-  line-height: 2.8rem; /* 175% */
+/* Main Grid */
+.main-grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto auto auto auto auto auto;
+  gap: 17rem 0rem;
+  grid-template-areas:
+    "."
+    "."
+    "."
+    "."
+    "."
+    "."
+    "."
+    "."
+    ".";
 }
 
 /* Header */
@@ -157,7 +201,7 @@ h2 {
   border-radius: 50%;
   top: 50%;
   transform: translateY(-50%);
-  left: -0.8rem;
+  left: -1.2rem;
 }
 
 .menu-item-link:hover::before {
@@ -222,10 +266,7 @@ h2 {
 }
 
 .hero-btn-link {
-  padding: 1.2rem 4.5rem;
-  font-size: 1.8rem;
-  font-weight: 400;
-  line-height: 3rem; /* 166.667% */
+  padding: 1.4rem 4.5rem;
 }
 
 .hero-cta-link {
@@ -267,10 +308,6 @@ h2 {
 }
 
 /* Service */
-.services {
-  padding-top: 17rem;
-  padding-bottom: 17rem;
-}
 
 .services-main-desc {
   margin-top: 1.8rem;
@@ -290,6 +327,7 @@ h2 {
 
 .services-thumb-image {
   width: 100%;
+  height: 100%;
   object-fit: cover;
   border-radius: 1.2rem;
   background: url(<path-to-image>) lightgray 0px -1.3px / 100% 149.93% no-repeat;
@@ -341,12 +379,8 @@ h2 {
 }
 
 .services-item-desc {
+  margin-top: 0.8rem;
   width: 35.1rem;
-}
-
-.services-label {
-  font-size: 2.6rem;
-  line-height: 3.6rem; /* 138.462% */
 }
 
 .service-cta-btn {
@@ -358,16 +392,13 @@ h2 {
 }
 
 .service-cta-link {
-  font-size: 1.8rem;
-  font-weight: 400;
-  line-height: 3rem;
-  padding: 1.1rem 5rem;
+  padding: 1.3rem 4.7rem;
 }
 
 /* Work */
 .work {
   padding-top: 10rem;
-  padding-bottom: 11.6rem;
+  padding-bottom: 10rem;
   background-color: #f6fbff;
 }
 
@@ -404,8 +435,6 @@ h2 {
 
 .work-label {
   margin-top: 1.8rem;
-  font-size: 2.6rem;
-  line-height: 3.6rem; /* 138.462% */
 }
 
 .work-item-desc {
@@ -428,10 +457,6 @@ h2 {
 }
 
 /* CTA */
-.cta {
-  padding-top: 17rem;
-  padding-bottom: 17rem;
-}
 
 .cta-thumb-container {
   position: relative;
@@ -476,4 +501,118 @@ h2 {
   width: 20.5rem;
   height: 6rem;
   border-radius: 3rem;
+}
+
+.learn-more-link {
+  padding: 1.4rem 4.7rem;
+}
+
+/* Doctors */
+.doctors-list-container {
+  margin-top: 7rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0rem 3rem;
+  grid-template-areas: ". . . .";
+}
+
+.doctors-btn {
+  margin-top: 3.8rem;
+  width: 20.5rem;
+  height: 6rem;
+  border-radius: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.doctors-link {
+  padding: 1.2rem 2.3rem;
+}
+
+.doctors-avatar {
+  width: 100%;
+  height: 31.8rem;
+  object-fit: cover;
+  scale: 0.9;
+  border-radius: 0.6rem;
+  transition: 0.25s;
+}
+
+.doctors-name {
+  margin-top: 1.8rem;
+}
+
+.switch-btn-container {
+  margin-top: 3.8rem;
+  justify-content: center;
+  gap: 1.8rem;
+}
+
+.circle-btn {
+  display: flex;
+  width: 3.6rem;
+  height: 3.6rem;
+  border-radius: 50%;
+  background-color: white;
+  border: 1px solid #575f66;
+  align-items: center;
+  justify-content: center;
+  transition: 0.25s;
+}
+
+.circle-btn-link {
+  color: #575f66;
+}
+
+.circle-btn:hover {
+  border-color: var(--primary-color);
+  background-color: var(--primary-color);
+}
+
+.circle-btn:hover .circle-btn-link {
+  color: white;
+}
+
+.doctors-item-container:hover .doctors-avatar {
+  scale: 1;
+}
+
+/* App Download */
+.app-download-container {
+  background-color: var(--primary-color);
+  position: relative;
+  padding-top: 7.6rem;
+  padding-bottom: 7.5rem;
+}
+
+.screen-capture {
+  position: absolute;
+  width: 28.4rem;
+  height: 52.2rem;
+  left: 7rem;
+  bottom: 0;
+}
+
+.app-download-info-container {
+  width: 50.08%;
+  margin-left: auto;
+  margin-right: 7rem;
+}
+
+.app-download-title {
+  color: white;
+  width: 48.9rem;
+}
+
+.app-download-desc {
+  color: white;
+  margin-top: 1.8rem;
+  font-weight: 300;
+}
+
+.app-library-icon-container {
+  display: flex;
+  gap: 2.8rem;
+  margin-top: 3.8rem;
 }
