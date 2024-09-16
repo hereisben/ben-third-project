@@ -30,7 +30,10 @@ body {
 .btn {
   display: flex;
   align-items: center;
+  width: 20.5rem;
+  height: 6rem;
   justify-content: center;
+  border-radius: 3rem;
   background-color: var(--primary-color);
 }
 
@@ -102,6 +105,7 @@ h2 {
 .medium-label-item-desc,
 .large-label-item-desc {
   color: var(--content-text-color);
+  font-weight: 300;
 }
 
 .small-label-item-desc {
@@ -154,6 +158,7 @@ h2 {
 .logo-text-container {
   flex-direction: column;
   width: 5rem;
+  margin-left: 0.6rem;
 }
 
 .logo-text {
@@ -262,7 +267,6 @@ h2 {
 .hero-btn {
   width: 20.5rem;
   height: 6rem;
-  border-radius: 3rem;
 }
 
 .hero-btn-link {
@@ -388,7 +392,6 @@ h2 {
   width: 20.5rem;
   height: 6rem;
   background-color: var(--primary-color);
-  border-radius: 3rem;
 }
 
 .service-cta-link {
@@ -493,14 +496,12 @@ h2 {
 
 .cta-desc {
   margin-top: 1.8rem;
-  width: 90%;
 }
 
 .learn-more-cta-btn {
   margin-top: 3.8rem;
   width: 20.5rem;
   height: 6rem;
-  border-radius: 3rem;
 }
 
 .learn-more-link {
@@ -521,7 +522,6 @@ h2 {
   margin-top: 3.8rem;
   width: 20.5rem;
   height: 6rem;
-  border-radius: 3rem;
   margin-left: auto;
   margin-right: auto;
 }
@@ -580,6 +580,7 @@ h2 {
 
 /* App Download */
 .app-download-container {
+  margin-top: 9.5rem;
   background-color: var(--primary-color);
   position: relative;
   padding-top: 7.6rem;
@@ -608,11 +609,145 @@ h2 {
 .app-download-desc {
   color: white;
   margin-top: 1.8rem;
-  font-weight: 300;
 }
 
 .app-library-icon-container {
   display: flex;
   gap: 2.8rem;
   margin-top: 3.8rem;
+}
+
+/* News & Events */
+.news-events {
+  margin-top: 6.8rem;
+}
+
+.news-events-title {
+  width: 47rem;
+}
+
+.news-events-view-all {
+  display: inline-block;
+  margin-top: 2.8rem;
+  color: var(--content-heading-color);
+  font-family: "Inter", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 2.8rem; /* 155.556% */
+}
+
+.news-events-view-all:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.5rem;
+}
+
+.news-events-switch-btn-container {
+  margin-top: 2.8rem;
+  gap: 1.8rem;
+}
+
+.news-events-list-container {
+  width: 48.71%;
+  margin-left: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0rem 3rem;
+  grid-template-areas: ". .";
+}
+
+.news-events-thumb-container {
+  height: 17.2rem;
+  overflow: hidden;
+}
+
+.news-events-thumb-image {
+  border-radius: 1.2rem 1.2rem 0rem 0rem;
+  background: url(<path-to-image>) lightgray -2px -4.032px / 100.741% 104.688%
+    no-repeat;
+  width: 100%;
+  height: 17.2rem;
+  object-fit: cover;
+  object-position: 50% 75%;
+  transition: 0.25s;
+}
+
+.news-events-item-detail-container {
+  padding: 1.8rem 2.2rem 2.1rem;
+}
+
+.news-events-item-container {
+  overflow: hidden;
+  border-radius: 1.2rem;
+  border: 1px solid #e8ebee;
+}
+
+.news-events-item-container:hover .news-events-thumb-image {
+  transform: scale(1.1);
+}
+
+.news-events-item-label {
+  width: 22.4rem;
+  color: var(--content-heading-color);
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 2.6rem; /* 162.5% */
+}
+
+.news-events-item-desc {
+  margin-top: 1rem;
+  color: #575f66;
+  font-size: 1.4rem;
+  font-weight: 300;
+  line-height: 2.4rem; /* 171.429% */
+}
+
+.news-events-link {
+  display: inline-block;
+  margin-top: 1.2rem;
+  color: var(--primary-color);
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+.news-events-link:hover {
+  color: var(--content-heading-color);
+}
+
+/* Appointent */
+.appointment {
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+  background-color: #f6fbff;
+}
+
+.appointment-title {
+  position: relative;
+  padding-bottom: 1.8rem;
+}
+
+.appointment-title::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 13.6rem;
+  height: 0.2rem;
+  background-color: var(--primary-color);
+}
+
+.appointment-desc {
+  width: 52.73%;
+  margin-top: 1.8rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.appointment-btn {
+  margin-top: 3.8rem;
+  width: 20.5rem;
+  height: 6rem;
+  margin-left: auto;
+  margin-right: auto;
 }
